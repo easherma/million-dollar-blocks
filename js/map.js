@@ -32,6 +32,10 @@ function init(type){
       scrollWheelZoom: false
     });
   }
+  
+  map.createPane('labels');
+  map.getPane('labels').style.zIndex = 650;
+  map.getPane('labels').style.pointerEvents = 'none';
 
   var jenks_values_commarea = commAreaTotal;
   var jenks_values_parcel = parcelTotal;
@@ -58,9 +62,14 @@ function init(type){
   }
 
   if (typeof base_layer === 'undefined'){
-    base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+    base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
       attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
     }).addTo(map);
+    
+    var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png', {
+        attribution: '©OpenStreetMap, ©CartoDB',
+        pane: 'labels'
+}).addTo(map);
   }
 
   if (typeof info !== 'undefined'){
