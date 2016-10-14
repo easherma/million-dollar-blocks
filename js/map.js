@@ -58,7 +58,7 @@ function init(type){
   }
 
   if (typeof base_layer === 'undefined'){
-  map.createPane('labels');
+  map._createPane('labels');
   map.getPane('labels').style.zIndex = 650;
   map.getPane('labels').style.pointerEvents = 'none';
     base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
