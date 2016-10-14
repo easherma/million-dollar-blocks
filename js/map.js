@@ -1,5 +1,6 @@
 var map;
 var base_layer;
+var labels;
 var comm_layer;
 var comm_sublayer;
 var parcel_layer;
@@ -58,14 +59,11 @@ function init(type){
   }
 
   if (typeof base_layer === 'undefined'){
-  map._createPane('labels');
-  map.getPanes('labels').style.zIndex = 650;
-  map.getPanes('labels').style.pointerEvents = 'none';
     base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
       attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
     }).addTo(map);
     
-    var darkLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png', {
+    labels = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png', {
         attribution: '©OpenStreetMap, ©CartoDB',
         pane: 'labels'
 }).addTo(map);
