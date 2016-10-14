@@ -26,7 +26,7 @@ var parcelDrug = [ 2003918.00, 727010.00, 304011.00, 92846.00, 1.00 ];
 function init(type){
   // initiate leaflet map
   if (map === undefined){
-   var map = new L.Map('cartodb-map', {
+   map = new L.Map('cartodb-map', {
       center: [41.8650, -87.6656],
       zoom: 12,
       scrollWheelZoom: false
