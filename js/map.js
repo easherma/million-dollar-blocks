@@ -58,9 +58,10 @@ function init(type){
   }
 
   if (typeof base_layer === 'undefined'){
-  map._createPane('labels');
-  map.getPane('labels').style.zIndex = 650;
-  map.getPane('labels').style.pointerEvents = 'none';
+  map._create
+  ('labels');
+  map.getPanes('labels').style.zIndex = 650;
+  map.getPanes('labels').style.pointerEvents = 'none';
     base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
       attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
     }).addTo(map);
