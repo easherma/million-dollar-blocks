@@ -31,11 +31,11 @@ function init(type){
       zoom: 12,
       scrollWheelZoom: false
     });
-  }
-  
-  map.createPane('labels');
+      map.createPane('labels');
   map.getPane('labels').style.zIndex = 650;
   map.getPane('labels').style.pointerEvents = 'none';
+    
+  }
 
   var jenks_values_commarea = commAreaTotal;
   var jenks_values_parcel = parcelTotal;
