@@ -62,11 +62,7 @@ function init(type){
     base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
       attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
     }).addTo(map);
-    
-    labels = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png', {
-        attribution: '©OpenStreetMap, ©CartoDB',
-        pane: 'labels'
-}).addTo(map);
+
   }
 
   if (typeof info !== 'undefined'){
