@@ -64,7 +64,7 @@ function init(type){
     }).addTo(map);
 
   }
-  
+  /*
     if (typeof labels === 'undefined'){
     base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png', {
       attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
@@ -72,7 +72,7 @@ function init(type){
     }).addTo(map);
 
   }
-  
+  */
 
 
   if (typeof info !== 'undefined'){
@@ -81,7 +81,8 @@ function init(type){
 
   info = L.control({position: 'bottomright'});
   info.onAdd = function(map){
-    this._div = L.DomUtil.create('div', 'info');
+    this._div = L.DomUtil.
+    ('div', 'info');
     this.update();
     this._div.innerHTML = '<h5><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> <span class="desktop-only">hover over</span><span class="mobile-only">tap on</span> blocks to see spending</h5>';
     return this._div;
@@ -233,7 +234,7 @@ $(window).resize(function () {
 
 $(function() {
   init('drug');
-  map.createPane('labels');
+
 
   $('.button').click(function() {
     $('.button').removeClass('selected');
