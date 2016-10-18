@@ -34,7 +34,7 @@ function init(type){
     });    
   }
   
-  map.createPane('labels');
+  //map.createPane('labels');
 
   var jenks_values_commarea = commAreaTotal;
   var jenks_values_parcel = parcelTotal;
