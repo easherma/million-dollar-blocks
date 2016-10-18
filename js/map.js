@@ -232,7 +232,7 @@ $(window).resize(function () {
 }).resize();
 
 $(function() {
-  init('drug');
+  //init('drug');
 
 
   $('.button').click(function() {
