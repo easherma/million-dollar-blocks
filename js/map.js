@@ -33,6 +33,8 @@ function init(type){
       scrollWheelZoom: false
     });    
   }
+  
+  map.createPane('labels');
 
   var jenks_values_commarea = commAreaTotal;
   var jenks_values_parcel = parcelTotal;
@@ -64,15 +66,15 @@ function init(type){
     }).addTo(map);
 
   }
-  /*
+  
     if (typeof labels === 'undefined'){
     base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png', {
-      attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
+      attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>',
       pane: 'labels'
     }).addTo(map);
 
   }
-  */
+  
 
 
   if (typeof info !== 'undefined'){
@@ -232,7 +234,7 @@ $(window).resize(function () {
 }).resize();
 
 $(function() {
-  //init('drug');
+  init('drug');
 
 
   $('.button').click(function() {
