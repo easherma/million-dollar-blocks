@@ -81,8 +81,7 @@ function init(type){
 
   info = L.control({position: 'bottomright'});
   info.onAdd = function(map){
-    this._div = L.DomUtil.
-    ('div', 'info');
+    this._div = L.DomUtil.create('div', 'info');
     this.update();
     this._div.innerHTML = '<h5><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> <span class="desktop-only">hover over</span><span class="mobile-only">tap on</span> blocks to see spending</h5>';
     return this._div;
