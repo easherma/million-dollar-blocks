@@ -64,6 +64,15 @@ function init(type){
     }).addTo(map);
 
   }
+  
+    if (typeof labels === 'undefined'){
+    base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_labels/{z}/{x}/{y}.png', {
+      attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
+    }).addTo(map);
+
+  }
+  
+  //map.createPane('labels');
 
   if (typeof info !== 'undefined'){
     info.removeFrom(map);
