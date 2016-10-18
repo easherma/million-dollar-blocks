@@ -68,11 +68,12 @@ function init(type){
     if (typeof labels === 'undefined'){
     base_layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png', {
       attribution: '<a href="http://mapbox.com/about/maps" target="_blank">Mapbox</a>'
+      pane: 'labels'
     }).addTo(map);
 
   }
   
-  //map.createPane('labels');
+
 
   if (typeof info !== 'undefined'){
     info.removeFrom(map);
@@ -232,6 +233,7 @@ $(window).resize(function () {
 
 $(function() {
   init('drug');
+  map.createPane('labels');
 
   $('.button').click(function() {
     $('.button').removeClass('selected');
